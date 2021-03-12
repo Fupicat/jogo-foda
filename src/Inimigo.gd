@@ -20,5 +20,6 @@ func dano(quanto_de_dano):
             $Col.queue_free()
 
 func _on_Area2d_body_entered(body) -> void:
-    if body.is_in_group("player"):
-        body.dano(15, self)
+    if consciencia:
+        if body.is_in_group("player"):
+            body.dano(5, self)
