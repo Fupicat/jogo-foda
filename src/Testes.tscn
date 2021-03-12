@@ -1,29 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Inimigo.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Inimigo.tscn" type="PackedScene" id=2]
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 30.9731
-
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 53.8534, 257.661 )
 
 [node name="Testes" type="Node2D"]
 
-[node name="Inimigo" type="KinematicBody2D" parent="."]
-position = Vector2( 584.587, 458.463 )
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="icon" type="Sprite" parent="Inimigo"]
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inimigo"]
-shape = SubResource( 2 )
+[node name="Inimigo" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 496.187, 301.141 )
@@ -33,4 +18,4 @@ position = Vector2( 253.984, 331.767 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -198.425, -26.9858 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
