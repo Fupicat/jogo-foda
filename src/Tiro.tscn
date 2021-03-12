@@ -26,4 +26,5 @@ shape = SubResource( 1 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+[connection signal="body_entered" from="." to="." method="_on_Tiro_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
