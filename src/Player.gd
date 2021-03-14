@@ -32,7 +32,7 @@ func _process(delta):
         
         move.normalized()
         
-        $Sprite.rotation = lerp($Sprite.rotation, deg2rad(direcao), 0.5)
+        $Sprite.rotation = lerp_angle($Sprite.rotation, deg2rad(direcao), 0.5)
         move = lerp(prev_move, move, 0.3)
         move_and_slide(move)
 
