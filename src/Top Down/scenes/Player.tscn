@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://kiryu.png" type="Texture" id=2]
-[ext_resource path="res://gun.png" type="Texture" id=3]
-[ext_resource path="res://Life.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Top Down/scenes/Life.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Top Down/scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Top Down/sprites/kiryu.png" type="Texture" id=3]
+[ext_resource path="res://Top Down/sprites/gun.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.8554
@@ -15,19 +15,19 @@ radius = 88.8773
 "player",
 ]]
 position = Vector2( 485.075, 340.826 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -0.630005 )
 rotation = 1.5708
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="gun" type="Sprite" parent="Sprite"]
 show_behind_parent = true
 position = Vector2( -7.13196, 69.4407 )
 scale = Vector2( 0.95983, 0.963855 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 offset = Vector2( 7.7356, -143.185 )
 
 [node name="Posicao" type="Position2D" parent="Sprite"]
@@ -56,7 +56,7 @@ one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="UI" parent="CanvasLayer" instance=ExtResource( 4 )]
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 1 )]
 [connection signal="mouse_entered" from="Limite" to="." method="_on_Limite_mouse_entered"]
 [connection signal="mouse_exited" from="Limite" to="." method="_on_Limite_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

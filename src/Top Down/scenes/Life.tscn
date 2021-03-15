@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/Placeholder.tres" type="DynamicFont" id=1]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vida" type="Label" parent="."]
+margin_right = 216.0
+margin_bottom = 69.0
+custom_fonts/font = ExtResource( 1 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Contador_de_kill" type="Label" parent="."]
+margin_left = 21.3784
+margin_top = 54.4604
+margin_right = 237.378
+margin_bottom = 123.46
+custom_fonts/font = ExtResource( 1 )
+text = "Kills: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}

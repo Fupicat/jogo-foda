@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/axis.png-8a3b46df859e776d32cb936519f32747.stex"
+path="res://.import/kiryu.png-9ad384982e8c7672812e7778cc7f9a78.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://axis.png"
-dest_files=[ "res://.import/axis.png-8a3b46df859e776d32cb936519f32747.stex" ]
+source_file="res://Top Down/sprites/kiryu.png"
+dest_files=[ "res://.import/kiryu.png-9ad384982e8c7672812e7778cc7f9a78.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/punk.png-49b6b657e48b3ba48aec1e7019a87d6c.stex"
+path="res://.import/mira.png-3c29fc63c663764ecf6008763a4aa18a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://punk.png"
-dest_files=[ "res://.import/punk.png-49b6b657e48b3ba48aec1e7019a87d6c.stex" ]
+source_file="res://Top Down/sprites/mira.png"
+dest_files=[ "res://.import/mira.png-3c29fc63c663764ecf6008763a4aa18a.stex" ]
 
 [params]
 

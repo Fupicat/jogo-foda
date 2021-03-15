@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="JogoLegau"
-run/main_scene="res://Testes.tscn"
+run/main_scene="res://Top Down/scenes/Testes.tscn"
 config/icon="res://icon.png"
 
 [input]

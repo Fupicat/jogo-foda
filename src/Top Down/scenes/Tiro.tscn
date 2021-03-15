@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Tiro.gd" type="Script" id=2]
+[ext_resource path="res://Top Down/scripts/Tiro.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.0026, 3.00043 )
 
 [node name="Tiro" type="Area2D"]
 scale = Vector2( 1, 1.003 )
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [node name="icon" type="ColorRect" parent="."]
 modulate = Color( 0.4, 1, 0, 1 )

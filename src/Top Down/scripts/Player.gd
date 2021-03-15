@@ -1,12 +1,13 @@
 extends KinematicBody2D
 
 const SPEED = 500
-const TIRO = preload("res://Tiro.tscn")
+const TIRO = preload("res://../Top Down/scenes/Tiro.tscn")
 var self_limite = false
 var life = 100
 var consciencia = true
 var move = Vector2(0, 0)
 var inv = false
+var kills = 0
 
 func _process(delta):
     if consciencia:
@@ -50,7 +51,7 @@ func dano(quanto_de_dano, fonte_do_dano):
         knockback(fonte_do_dano)
         life -= quanto_de_dano
         $Timer.start()
-        $CanvasLayer/UI/Text.text = str(life)
+        $CanvasLayer/UI/Vida.text = str(life)
         if life <= 0:
             print("game over")
             consciencia = false
@@ -71,3 +72,7 @@ func knockback(dano_do_fonte):
 func _on_Timer_timeout() -> void:
     inv = false
     $Sprite.modulate = Color(1, 1, 1)
+
+func _on_Inimigo_death() -> void:
+    kills += 1
+    $CanvasLayer/UI/Contador_de_kill.text = ("Kills: " + str(kills))
