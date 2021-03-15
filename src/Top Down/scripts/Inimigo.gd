@@ -3,12 +3,16 @@ extends KinematicBody2D
 const SPEED = 300
 var life = 100
 var consciencia = true
+onready var player = $"../Player"
 
 signal death
 
+func _ready():
+    connect("death", player, "_on_Inimigo_death")
+
 func _process(delta):
     if consciencia:
-        var player_pos = $"../Player".position
+        var player_pos = player.position
         look_at(player_pos)
         move_and_slide(Vector2(SPEED, 0).rotated(rotation))
 

@@ -57,6 +57,7 @@ one_shot = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 1 )]
+
 [connection signal="mouse_entered" from="Limite" to="." method="_on_Limite_mouse_entered"]
 [connection signal="mouse_exited" from="Limite" to="." method="_on_Limite_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
