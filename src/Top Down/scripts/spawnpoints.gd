@@ -1,22 +1,25 @@
 extends Node2D
 
 const INIMIGO = preload("res://Top Down/scenes/Inimigo.tscn")
-var posicao = RandomNumberGenerator.new()
-var numero = RandomNumberGenerator.new()
-var node_posicao = 0
+onready var posicoes = get_tree().get_nodes_in_group("posicoes")
+var pos = 0
+var inimigos = 0
+var debug = 0
 
 func _ready():
     timer()
 
 func timer():
-    numero.randomize()
-    var tempo_determinado = round(numero.randf_range(1, 3))
+    randomize()
+    var tempo_determinado = round(rand_range(1, 3))
     $Timer.wait_time = tempo_determinado
     $Timer.start()
 
 func _on_Timer_timeout() -> void:
-    posicao.randomize()
-    var posicao_ini = round(posicao.randf_range(1,4))
-    add_child(INIMIGO.instance())
-    $Inimigo.position = get_node("Position2D_"+str(posicao_ini)).position
-    timer()
+    var instancia = INIMIGO.instance()
+    if inimigos != 10:
+        inimigos += 1
+        pos = posicoes[round(rand_range(0,3))].position
+        $"..".add_child(instancia)
+        instancia.position = pos
+        timer()
