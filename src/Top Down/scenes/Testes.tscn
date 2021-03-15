@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Top Down/scenes/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Top Down/scenes/Inimigo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Top Down/scripts/spawnpoints.gd" type="Script" id=3]
 
 [node name="Testes" type="Node2D"]
@@ -22,10 +21,8 @@ position = Vector2( 1298.25, 743.876 )
 position = Vector2( 79.196, 503.46 )
 
 [node name="Timer" type="Timer" parent="SpawnPoints"]
-
-[node name="Inimigo" parent="." instance=ExtResource( 2 )]
-position = Vector2( 574.519, 480.501 )
+one_shot = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 479.216, 284.17 )
-[connection signal="death" from="Inimigo" to="Player" method="_on_Inimigo_death"]
+[connection signal="timeout" from="SpawnPoints/Timer" to="SpawnPoints" method="_on_Timer_timeout"]
