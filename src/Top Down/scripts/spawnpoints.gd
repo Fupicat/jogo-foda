@@ -1,6 +1,6 @@
 extends Node2D
 
-const INIMIGO = preload("res://Top Down/scenes/inimigo.tscn")
+const INIMIGO = preload("res://Top Down/scenes/Inimigo.tscn")
 var posicao = RandomNumberGenerator.new()
 var numero = RandomNumberGenerator.new()
 var node_posicao = 0
