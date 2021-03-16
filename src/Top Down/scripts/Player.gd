@@ -8,6 +8,10 @@ var consciencia = true
 var move = Vector2(0, 0)
 var inv = false
 var kills = 0
+var wave = 1
+
+func _ready():
+    $Timer_Wave.start()
 
 func _process(delta):
     if consciencia:
@@ -76,3 +80,12 @@ func _on_Timer_timeout() -> void:
 func _on_Inimigo_death() -> void:
     kills += 1
     $CanvasLayer/UI/Contador_de_kill.text = ("Kills: " + str(kills))
+
+func _acionar_wave():
+    wave += 1
+    $CanvasLayer/UI/Waves.visible = true
+    $CanvasLayer/UI/Waves.text = "Wave " + str(wave)
+    $Timer_Wave.start()
+ 
+func _on_Timer_Wave_timeout() -> void:
+    $CanvasLayer/UI/Waves.visible = false

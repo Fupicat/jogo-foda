@@ -4,11 +4,13 @@ const SPEED = 300
 var life = 100
 var consciencia = true
 onready var player = $"../Player"
+onready var spawn = $"../SpawnPoints"
 
 signal death
 
 func _ready():
     connect("death", player, "_on_Inimigo_death")
+    connect("death", spawn, "_on_Inimigo_death")
 
 func _process(delta):
     if consciencia:

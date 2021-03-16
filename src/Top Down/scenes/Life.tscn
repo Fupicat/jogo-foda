@@ -6,6 +6,7 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -25,6 +26,17 @@ margin_right = 237.378
 margin_bottom = 123.46
 custom_fonts/font = ExtResource( 1 )
 text = "Kills: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Waves" type="Label" parent="."]
+margin_left = 417.121
+margin_top = 544.243
+margin_right = 570.121
+margin_bottom = 602.243
+custom_fonts/font = ExtResource( 1 )
+text = "Wave 1"
 __meta__ = {
 "_edit_use_anchors_": false
 }
