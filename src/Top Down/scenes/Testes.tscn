@@ -1,16 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Top Down/scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Top Down/scenes/Inimigo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Top Down/scripts/spawnpoints.gd" type="Script" id=3]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.0784314, 0.0784314, 0.0784314, 0.427451 )
-
 [node name="Testes" type="Node2D"]
-
-[node name="Inimigo" parent="." instance=ExtResource( 2 )]
-position = Vector2( 957.83, 635.16 )
 
 [node name="SpawnPoints" type="Node2D" parent="."]
 script = ExtResource( 3 )
@@ -38,23 +32,10 @@ position = Vector2( 932.458, 405.297 )
 [node name="Timer" type="Timer" parent="SpawnPoints"]
 one_shot = true
 
+[node name="Inimigo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 957.83, 635.16 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 479.216, 284.17 )
-
-[node name="Debug" type="CanvasLayer" parent="."]
-
-[node name="Label" type="RichTextLabel" parent="Debug"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 346.102
-margin_top = 0.877533
-margin_right = -387.898
-margin_bottom = -501.122
-custom_styles/normal = SubResource( 1 )
-text = "em breve, o print já dá pro gasto mas seria legal um console dentro do jogo :vv"
-scroll_following = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="timeout" from="SpawnPoints/Timer" to="SpawnPoints" method="_on_Timer_timeout"]
