@@ -9,6 +9,7 @@ var move = Vector2(0, 0)
 var inv = false
 var kills = 0
 var wave = 1
+var gun
 
 func _ready():
     $Timer_Wave.start()
@@ -42,7 +43,7 @@ func _input(event):
 
 func atire():
     if consciencia:
-        $"..".add_child(TIRO.instance())
+        gun.atire()
 
 func _on_Limite_mouse_entered() -> void:
     self_limite = true
@@ -50,9 +51,10 @@ func _on_Limite_mouse_entered() -> void:
 func _on_Limite_mouse_exited() -> void:
     self_limite = false
 
-func dano(quanto_de_dano, fonte_do_dano):
+func dano(quanto_de_dano, fonte_do_dano = null):
     if life > 0 && !inv:
-        knockback(fonte_do_dano)
+        if fonte_do_dano:
+            knockback(fonte_do_dano)
         life -= quanto_de_dano
         $Timer.start()
         $CanvasLayer/UI/Vida.text = str(life)

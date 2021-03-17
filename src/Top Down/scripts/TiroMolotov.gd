@@ -1,5 +1,6 @@
 extends Area2D
 
+const EXPLOSAO = preload("res://Top Down/scenes/Explosao.tscn")
 const SPEED = 500
 
 func atire(pos):
@@ -10,9 +11,14 @@ func _process(delta):
     position += Vector2(SPEED * delta, 0).rotated(rotation)
 
 func _on_Timer_timeout():
-    queue_free()
+    explode()
 
 func _on_Tiro_body_entered(body) -> void:
     if body.has_method("dano") and !body.is_in_group("player"):
-        body.dano(15)
-        queue_free()
+        explode()
+
+func explode():
+    var expl = EXPLOSAO.instance()
+    get_parent().call_deferred("add_child", expl)
+    expl.global_position = global_position
+    queue_free()

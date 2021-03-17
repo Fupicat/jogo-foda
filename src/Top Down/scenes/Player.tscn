@@ -3,7 +3,7 @@
 [ext_resource path="res://Top Down/scenes/Life.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Top Down/scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Top Down/sprites/kiryu.png" type="Texture" id=3]
-[ext_resource path="res://Top Down/sprites/gun.png" type="Texture" id=4]
+[ext_resource path="res://Top Down/scenes/Armas/Molotov.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.8554
@@ -24,16 +24,7 @@ rotation = 1.5708
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )
 
-[node name="gun" type="Sprite" parent="Sprite"]
-show_behind_parent = true
-position = Vector2( -7.13196, 69.4407 )
-scale = Vector2( 0.95983, 0.963855 )
-texture = ExtResource( 4 )
-offset = Vector2( 7.7356, -143.185 )
-
-[node name="Posicao" type="Position2D" parent="Sprite"]
-position = Vector2( -2.38904, -258.187 )
-scale = Vector2( 0.95983, 0.963855 )
+[node name="Molotov" parent="Sprite" instance=ExtResource( 4 )]
 
 [node name="Col" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
