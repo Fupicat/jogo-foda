@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pistola_ico.png-c98cc15b763a9f59b0df6750bf8ff701.stex"
+path="res://.import/gun_2.png-d782d0ac14e8af3dc3efd4caf8f3bdb8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Top Down/sprites/pistola_ico.png"
-dest_files=[ "res://.import/pistola_ico.png-c98cc15b763a9f59b0df6750bf8ff701.stex" ]
+source_file="res://Top Down/sprites/Armas_selecionadas/gun_2.png"
+dest_files=[ "res://.import/gun_2.png-d782d0ac14e8af3dc3efd4caf8f3bdb8.stex" ]
 
 [params]
 

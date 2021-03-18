@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gun_2.png-5d5565e7ad4d328f45a078c7770fa1c2.stex"
+path="res://.import/kiryu.png-07fd8b89ae2edcc82567351c4720bea8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Top Down/sprites/gun_2.png"
-dest_files=[ "res://.import/gun_2.png-5d5565e7ad4d328f45a078c7770fa1c2.stex" ]
+source_file="res://Top Down/sprites/Personas/kiryu.png"
+dest_files=[ "res://.import/kiryu.png-07fd8b89ae2edcc82567351c4720bea8.stex" ]
 
 [params]
 

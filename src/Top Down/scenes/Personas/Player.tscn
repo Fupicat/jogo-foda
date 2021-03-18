@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Top Down/scenes/Life.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Top Down/scripts/Player.gd" type="Script" id=2]
-[ext_resource path="res://Top Down/sprites/kiryu.png" type="Texture" id=3]
-[ext_resource path="res://Top Down/scenes/Armas/Molotov.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Top Down/scenes/UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Top Down/scripts/Personas/Player.gd" type="Script" id=2]
+[ext_resource path="res://Top Down/sprites/Personas/kiryu.png" type="Texture" id=3]
+[ext_resource path="res://Top Down/scenes/Armas/Gun.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.8554
@@ -24,7 +24,7 @@ rotation = 1.5708
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 3 )
 
-[node name="Molotov" parent="Sprite" instance=ExtResource( 4 )]
+[node name="Pistola" parent="Sprite" instance=ExtResource( 4 )]
 
 [node name="Col" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -46,10 +46,6 @@ smoothing_enabled = true
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 
-[node name="Timer_Wave" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource( 1 )]
@@ -57,4 +53,3 @@ one_shot = true
 [connection signal="mouse_entered" from="Limite" to="." method="_on_Limite_mouse_entered"]
 [connection signal="mouse_exited" from="Limite" to="." method="_on_Limite_mouse_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="timeout" from="Timer_Wave" to="." method="_on_Timer_Wave_timeout"]

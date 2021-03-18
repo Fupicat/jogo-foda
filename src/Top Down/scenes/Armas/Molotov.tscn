@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Top Down/scripts/Molotov.gd" type="Script" id=1]
-[ext_resource path="res://Top Down/sprites/gun_2.png" type="Texture" id=2]
+[ext_resource path="res://Top Down/scripts/Armas/Molotov.gd" type="Script" id=1]
+[ext_resource path="res://Top Down/sprites/Armas_selecionadas/gun_2.png" type="Texture" id=2]
 
 [node name="Molotov" type="Node2D"]
 script = ExtResource( 1 )

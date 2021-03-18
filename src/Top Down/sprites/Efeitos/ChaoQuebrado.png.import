@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/molotov_ico.png-605d28e69be57dfe7b4caddcec048287.stex"
+path="res://.import/ChaoQuebrado.png-61a3752e7e86a6a9eae250637c932fdb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Top Down/sprites/molotov_ico.png"
-dest_files=[ "res://.import/molotov_ico.png-605d28e69be57dfe7b4caddcec048287.stex" ]
+source_file="res://Top Down/sprites/Efeitos/ChaoQuebrado.png"
+dest_files=[ "res://.import/ChaoQuebrado.png-61a3752e7e86a6a9eae250637c932fdb.stex" ]
 
 [params]
 

@@ -1,8 +1,8 @@
 extends Node2D
 
-const INIMIGO = preload("res://Top Down/scenes/Inimigo.tscn")
+const INIMIGO = preload("res://Top Down/scenes/Personas/Inimigos/Zumbi_Standard.tscn")
 const LIMITE = 10
-onready var player = $"../Player"
+onready var UI = $"../Player/CanvasLayer/UI"
 onready var posicoes = get_tree().get_nodes_in_group("posicoes")
 var pos = 0
 var inimigos = 0
@@ -13,7 +13,8 @@ var kills = 0
 signal wave
 
 func _ready():
-    connect("wave", player, "_acionar_wave")
+# warning-ignore:return_value_discarded
+    connect("wave", UI, "_acionar_wave")
     timer()
 
 func timer():
@@ -35,7 +36,7 @@ func _on_Timer_timeout() -> void:
 
 func _on_Inimigo_death() -> void:
     kills += 1
-    print(kills)
+    UI.update_kills(kills)
     if kills >= LIMITE:
         inimigos = 0
         kills = 0

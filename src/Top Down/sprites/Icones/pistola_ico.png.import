@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mira.png-3c29fc63c663764ecf6008763a4aa18a.stex"
+path="res://.import/pistola_ico.png-f87a150bf504026cfa38900227dd2337.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Top Down/sprites/mira.png"
-dest_files=[ "res://.import/mira.png-3c29fc63c663764ecf6008763a4aa18a.stex" ]
+source_file="res://Top Down/sprites/Icones/pistola_ico.png"
+dest_files=[ "res://.import/pistola_ico.png-f87a150bf504026cfa38900227dd2337.stex" ]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Top Down/scripts/Inimigo.gd" type="Script" id=1]
-[ext_resource path="res://Top Down/sprites/punk.png" type="Texture" id=2]
+[ext_resource path="res://Top Down/scripts/Personas/Inimigos/Inimigo.gd" type="Script" id=1]
+[ext_resource path="res://Top Down/sprites/Personas/Inimigos/Inimigo_Standard.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 37.2424

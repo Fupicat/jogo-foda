@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Top Down/scripts/Gun.gd" type="Script" id=1]
-[ext_resource path="res://Top Down/sprites/gun.png" type="Texture" id=2]
+[ext_resource path="res://Top Down/scripts/Armas/Gun.gd" type="Script" id=1]
+[ext_resource path="res://Top Down/sprites/Armas_selecionadas/gun.png" type="Texture" id=2]
 
 [node name="Pistola" type="Node2D" groups=[
 "gun",

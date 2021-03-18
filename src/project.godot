@@ -12,16 +12,22 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "GunBase",
 "language": "GDScript",
-"path": "res://Top Down/scripts/GunBase.gd"
+"path": "res://Top Down/scripts/Armas/GunBase.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Person",
+"language": "GDScript",
+"path": "res://Top Down/scripts/Personas/PersonBase.gd"
 } ]
 _global_script_class_icons={
-"GunBase": ""
+"GunBase": "",
+"Person": ""
 }
 
 [application]
 
 config/name="JogoLegau"
-run/main_scene="res://Top Down/scenes/Testes.tscn"
+run/main_scene="res://Top Down/scenes/Stages/Testes.tscn"
 config/icon="res://icon.png"
 
 [input]
