@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
 const SPEED = 500
-const TIRO = preload("res://../Top Down/scenes/Tiro.tscn")
 var self_limite = false
 var life = 100
 var consciencia = true
