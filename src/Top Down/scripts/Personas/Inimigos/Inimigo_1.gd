@@ -5,7 +5,7 @@ onready var spawn = $"../SpawnPoints"
 var tiro = preload("res://Top Down/scenes/Armas/Tiro/Tiro.tscn").instance()
 
 func _init():
-    speed = 100
+    speed = 150
 
 func _ready():
 # warning-ignore:return_value_discarded
@@ -16,9 +16,8 @@ func mov_custom():
     look_at(player_pos)
     move = Vector2(speed, 0).rotated(rotation)
 
-func tiro():
-    tiro.position = $Sprite/Position2D.position
-    $Timer.start()
+func shoot():
+    tiro.atire(position)
 
 # Sinais ///////////////////////////////
 
@@ -28,4 +27,4 @@ func _on_Area2d_body_entered(body) -> void:
             body.dano(5, self)
 
 func _on_Timer_timeout() -> void:
-    tiro()
+    shoot()

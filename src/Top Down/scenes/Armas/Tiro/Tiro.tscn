@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Top Down/scripts/Armas/Tiro.gd" type="Script" id=1]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.0026, 3.00043 )
 
@@ -27,5 +26,6 @@ shape = SubResource( 1 )
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_Tiro_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
