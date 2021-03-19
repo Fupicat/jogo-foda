@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Top Down/scripts/Personas/Inimigos/Inimigo_0.gd" type="Script" id=1]
+[ext_resource path="res://Top Down/scripts/Personas/Inimigos/Inimigo_1.gd" type="Script" id=1]
 [ext_resource path="res://Top Down/sprites/Personas/Inimigos/Inimigo_Standard.png" type="Texture" id=2]
-
+[ext_resource path="res://Top Down/sprites/Armas_selecionadas/gun.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 37.2424
@@ -16,6 +16,16 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0, 1, 0.160784, 1 )
+position = Vector2( 12.217, 0.909668 )
+rotation = 1.57079
+scale = Vector2( 0.174369, 0.174369 )
+texture = ExtResource( 3 )
+
+[node name="Position2D" type="Position2D" parent="Sprite"]
+position = Vector2( -3.40967, -197.782 )
 
 [node name="Area2d" type="Area2D" parent="."]
 
@@ -31,4 +41,8 @@ texture = ExtResource( 2 )
 [node name="Col" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="body_entered" from="Area2d" to="." method="_on_Area2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

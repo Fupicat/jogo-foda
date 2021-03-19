@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Top Down/scripts/Fases/spawnpoints.gd" type="Script" id=1]
 [ext_resource path="res://Top Down/scenes/Personas/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Top Down/scenes/Personas/Inimigos/Zumbi_Armado.tscn" type="PackedScene" id=3]
 
 [node name="Testes" type="Node2D"]
 
@@ -33,5 +34,8 @@ one_shot = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 479.216, 284.17 )
+
+[node name="Inimigo" parent="." instance=ExtResource( 3 )]
+position = Vector2( 110.842, 489.532 )
 
 [connection signal="timeout" from="SpawnPoints/Timer" to="SpawnPoints" method="_on_Timer_timeout"]
