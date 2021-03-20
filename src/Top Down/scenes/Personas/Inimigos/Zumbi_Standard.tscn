@@ -3,14 +3,15 @@
 [ext_resource path="res://Top Down/scripts/Personas/Inimigos/Inimigo_0.gd" type="Script" id=1]
 [ext_resource path="res://Top Down/sprites/Personas/Inimigos/Inimigo_Standard.png" type="Texture" id=2]
 
-
 [sub_resource type="CircleShape2D" id=1]
 radius = 37.2424
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 30.9731
 
-[node name="Inimigo" type="KinematicBody2D"]
+[node name="Inimigo" type="KinematicBody2D" groups=[
+"inimigo",
+]]
 position = Vector2( 584.587, 458.463 )
 script = ExtResource( 1 )
 __meta__ = {

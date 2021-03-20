@@ -2,7 +2,7 @@ extends Person
 
 onready var player = $"../Player"
 onready var spawn = $"../SpawnPoints"
-var tiro = preload("res://Top Down/scenes/Armas/Tiro/Tiro.tscn").instance()
+const TIRO = preload("res://Top Down/scenes/Armas/Tiro/TiroInimigo.tscn")
 
 func _init():
     speed = 150
@@ -17,7 +17,9 @@ func mov_custom():
     move = Vector2(speed, 0).rotated(rotation)
 
 func shoot():
-    tiro.atire(position)
+    var bala_inst = TIRO.instance()
+    get_parent().add_child(bala_inst)
+    bala_inst.atire(global_position)
 
 # Sinais ///////////////////////////////
 
@@ -27,4 +29,5 @@ func _on_Area2d_body_entered(body) -> void:
             body.dano(5, self)
 
 func _on_Timer_timeout() -> void:
-    shoot()
+    if consciencia:
+        shoot()

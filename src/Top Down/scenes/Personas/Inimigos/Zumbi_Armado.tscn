@@ -10,7 +10,9 @@ radius = 37.2424
 [sub_resource type="CircleShape2D" id=2]
 radius = 30.9731
 
-[node name="Inimigo" type="KinematicBody2D"]
+[node name="Inimigo" type="KinematicBody2D" groups=[
+"inimigo",
+]]
 position = Vector2( 584.587, 458.463 )
 script = ExtResource( 1 )
 __meta__ = {

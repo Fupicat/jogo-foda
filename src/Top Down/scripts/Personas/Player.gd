@@ -49,7 +49,8 @@ func dano_custom(fonte_do_dano):
         $Timer.start()
         $CanvasLayer/UI/Vida.text = str(life)
     if inv:
-        knockback(fonte_do_dano)
+        if fonte_do_dano:
+            knockback(fonte_do_dano)
 
 func gun_next():
     selecionado += 1
